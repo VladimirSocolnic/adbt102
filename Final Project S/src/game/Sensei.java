@@ -1,0 +1,25 @@
+package game;
+
+import city.cs.engine.*;
+
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import java.io.IOException;
+
+public class Sensei extends Walker {
+
+    private static final Shape professorShape = new PolygonShape(
+            1.84f,1.99f, 1.96f,-0.3f, 1.5f,-2.36f,
+            -0.47f,-2.33f, -1.98f,1.69f, 0.5f,2.46f);
+
+    private static final BodyImage image =
+            new BodyImage("data/sensai.png", 5f);
+
+
+
+    public Sensei(World world) {
+        super(world, professorShape);
+        addImage(image);
+    }
+
+}
